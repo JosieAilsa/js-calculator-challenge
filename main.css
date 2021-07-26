@@ -8,6 +8,7 @@ body {
   background: -webkit-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   background: -webkit-gradient(linear, -17.38% -36.91%, 127.42% 149.86%, color-stop(0.0799, #d2d8a3), color-stop(0.2251, rgba(199, 216, 178, 0.91)), color-stop(0.34, rgba(188, 216, 193, 0.84)), color-stop(0.4767, #85bcb3), color-stop(0.876, #007991));
   background: -o-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
+  background: -ms-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2D8A3', endColorstr='#007991' ,GradientType=0)";
   background: linear-gradient(125.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D2D8A3",endColorstr="#007991" , GradientType=1);
@@ -71,8 +72,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.container .calculator__button:hover,
-.container .calculator__button:focus {
+.container .calculator__button:hover {
   background: #222E50;
   color: #ffffff;
 }

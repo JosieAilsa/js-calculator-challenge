@@ -60,8 +60,7 @@
     -moz-appearance: none;
 }
 
-.calculator__button:hover,
-.calculator__button:focus {
+.calculator__button:hover {
     background: #222E50;
     color: $secondary-colour;
 }

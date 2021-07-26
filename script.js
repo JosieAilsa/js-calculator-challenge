@@ -41,6 +41,11 @@ let printValue = (event) => {
     answer.innerHTML += value;
 }
 
+let clearValues = (event) => {
+    let value = event.target.value;
+    answer.innerHTML = value;
+}
+
 let sum = ()=> {
     parseFloat(answer.nodeValue);
 }
