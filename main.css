@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222E50;
+  height: 100vh;
+  width: 100vh;
+  background: -moz-linear-gradient(-17.38% -36.91% -35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
+  background: -webkit-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
+  background: -webkit-gradient(linear, -17.38% -36.91%, 127.42% 149.86%, color-stop(0.0799, #d2d8a3), color-stop(0.2251, rgba(199, 216, 178, 0.91)), color-stop(0.34, rgba(188, 216, 193, 0.84)), color-stop(0.4767, #85bcb3), color-stop(0.876, #007991));
+  background: -o-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
+  background: -ms-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2D8A3', endColorstr='#007991' ,GradientType=0)";
+  background: linear-gradient(125.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D2D8A3",endColorstr="#007991" , GradientType=1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: minmax(10px, 16px);
+}
+.container .calc-container {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  min-width: 300px;
+  max-width: 536px;
+  gap: 10px;
+}
+.container .calculator-heading {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container #answer {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.container .calculator__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 0px;
+}
+@media screen and (max-width: 480px) {
+  .container .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(50px, auto);
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(50px, auto);
+  }
+}
+@media screen and (max-width: 991px) {
+  .container .container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 16px;
+    max-width: 960px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(50px, auto);
+  }
+}
+@media screen and (min-width: 991px) {
+  .container .container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 16px;
+    max-width: 960px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(50px, auto);
+  }
+}
