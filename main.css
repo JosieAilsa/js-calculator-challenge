@@ -8,7 +8,6 @@ body {
   background: -webkit-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   background: -webkit-gradient(linear, -17.38% -36.91%, 127.42% 149.86%, color-stop(0.0799, #d2d8a3), color-stop(0.2251, rgba(199, 216, 178, 0.91)), color-stop(0.34, rgba(188, 216, 193, 0.84)), color-stop(0.4767, #85bcb3), color-stop(0.876, #007991));
   background: -o-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
-  background: -ms-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2D8A3', endColorstr='#007991' ,GradientType=0)";
   background: linear-gradient(125.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D2D8A3",endColorstr="#007991" , GradientType=1);
@@ -20,7 +19,7 @@ body {
   grid-template-rows: repeat(4, 1fr);
   gap: minmax(10px, 16px);
 }
-.container .calc-container {
+.container .calculator__container {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -28,7 +27,7 @@ body {
   max-width: 536px;
   gap: 10px;
 }
-.container #calculator-heading {
+.container #calculator__heading {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
@@ -38,7 +37,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container #answer {
+.container #calculator__answer {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -46,15 +45,39 @@ body {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   margin: 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .container .calculator__button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 0px;
   margin: 0px;
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.5);
+  color: #222E50;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.container .calculator__button:hover,
+.container .calculator__button:focus {
+  background: #222E50;
+  color: #ffffff;
+}
+.container .calculator__button:active {
+  transform: scale(0.99);
 }
 @media screen and (max-width: 480px) {
   .container .container {
