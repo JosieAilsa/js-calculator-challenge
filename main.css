@@ -38,7 +38,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container #calculator__answer {
+.container #calculator__display {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
