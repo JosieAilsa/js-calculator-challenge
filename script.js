@@ -104,29 +104,6 @@ equals.addEventListener("click", () => {
     }
 });
 
-//   let operatorInArray = operatorArray[0];
-//     switch (operatorInArray) {
-//         case "+":
-//         let answer = sumArray.reduce(plusSum);
-//         return display.innerHTML = answer;
-//         break;
-//         case "-":
-//         let answer = sumArray.reduce(minusSum);
-//         return display.innerHTML = answer;
-//         break;
-//         case "*":
-//         let answer = sumArray.reduce(multiplySum);
-//         return display.innerHTML = answer;
-//         break;
-//         case "/":
-//         let answer = sumArray.reduce(divideSum);
-//         return display.innerHTML = answer;
-//         break;
-//         default:
-//         return display.innerHTML = "error"
-// //     }
-// });
-
 
 
   

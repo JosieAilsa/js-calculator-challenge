@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #222E50;
-  height: 100vh;
-  width: 100vh;
   background: -moz-linear-gradient(-17.38% -36.91% -35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   background: -webkit-linear-gradient(-35.96deg, #d2d8a3 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, #85bcb3 47.67%, #007991 87.6%);
   background: -webkit-gradient(linear, -17.38% -36.91%, 127.42% 149.86%, color-stop(0.0799, #d2d8a3), color-stop(0.2251, rgba(199, 216, 178, 0.91)), color-stop(0.34, rgba(188, 216, 193, 0.84)), color-stop(0.4767, #85bcb3), color-stop(0.876, #007991));
@@ -17,18 +21,58 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   gap: minmax(10px, 16px);
 }
-.container .calculator__container {
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .container {
+    margin: 36px 0px;
+  }
+  .container .calculator {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    margin: 36px 0px;
+    gap: 16px;
+  }
+  .container .calculator {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) and (min-width: 768px) and (max-width: 2500px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 16px;
+    margin: 182px 0px;
+  }
+  .container .calculator {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+.calculator {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   min-width: 300px;
   max-width: 536px;
   gap: 10px;
 }
-.container #calculator__heading {
+
+#calculator__heading {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
@@ -38,7 +82,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container #calculator__display {
+
+#calculator__display {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -50,7 +95,8 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-.container #equals {
+
+#equals {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 7;
@@ -59,7 +105,8 @@ body {
   border-radius: 10px;
   margin: 0px;
 }
-.container .calculator__button {
+
+.calculator__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,44 +128,12 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.container .calculator__button:hover, .container #equals:hover {
+
+.calculator__button:hover, #equals:hover {
   background: #222E50;
   color: #ffffff;
 }
-.container .calculator__button:active #equals:active {
+
+.calculator__button:active #equals:active {
   transform: scale(0.99);
-}
-@media screen and (max-width: 480px) {
-  .container .container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(50px, auto);
-    width: 100px;
-    margin: 36px, 10px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container .container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: minmax(50px, auto);
-  }
-}
-@media screen and (max-width: 991px) {
-  .container .container {
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 16px;
-    max-width: 960px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: minmax(50px, auto);
-  }
-}
-@media screen and (min-width: 991px) {
-  .container .container {
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 16px;
-    max-width: 960px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: minmax(50px, auto);
-  }
 }

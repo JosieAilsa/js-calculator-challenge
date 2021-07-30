@@ -3,12 +3,14 @@
 $primary-colour: #222E50;
 $secondary-colour:#ffffff;
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Poppins', sans-serif;
     color: $primary-colour;
-    height: 100vh;
-    width: 100vh;
     background : -moz-linear-gradient(-17.38% -36.91% -35.96deg,rgba(210, 216, 163, 1) 7.99%,rgba(199, 216, 178, 0.91) 22.51%,rgba(188, 216, 193, 0.84) 34%,rgba(133, 188, 179, 1) 47.67%,rgba(0, 121, 145, 1) 87.6%);
     background : -webkit-linear-gradient(-35.96deg, rgba(210, 216, 163, 1) 7.99%, rgba(199, 216, 178, 0.91) 22.51%, rgba(188, 216, 193, 0.84) 34%, rgba(133, 188, 179, 1) 47.67%, rgba(0, 121, 145, 1) 87.6%);
     background : -webkit-gradient(linear,-17.38% -36.91% ,127.42% 149.86% ,color-stop(0.0799,rgba(210, 216, 163, 1) ),color-stop(0.2251,rgba(199, 216, 178, 0.91) ),color-stop(0.34,rgba(188, 216, 193, 0.84) ),color-stop(0.4767,rgba(133, 188, 179, 1) ),color-stop(0.876,rgba(0, 121, 145, 1) ));
