@@ -12,7 +12,22 @@ let display = document.querySelector("#calculator__display");
 // Declare current/prev value variables and the sum array 
 let currentValue = display.innerHTML; 
 let previousValue = "";
-let sumArray  = []
+let sumArray  = [];
+let operatorValue = "";
+
+const plusSum = (acc, curr) => {
+    return acc += curr;
+    };
+const minusSum = (acc, curr) => {
+    return acc - curr;
+    };
+const multiplySum = (acc, curr) => {
+    return acc * curr;
+    };
+const divideSum = (acc, curr) => {
+    return acc / curr;
+    };
+
 
 // When each number is pressed the add the number to the display 
 calcNumber.forEach((number) => {
@@ -36,11 +51,11 @@ calcOperators.forEach((operator) => {
 //When an operator is pressed change the current display value into the previous value var
     previousValue = display.innerHTML;
 //Push this value to element 0 in the sum array 
-    sumArray.push(previousValue);
+    sumArray.push(parseInt(previousValue));
 // Then get the value of the operator that was hit and store that in the array 
     operatorValue = event.target.value;
-    sumArray.push(operatorValue);
     console.dir(sumArray)
+
 //Clear the display to allow a new value to be added 
     currentValue = "";
     display.innerHTML = currentValue;
@@ -49,32 +64,69 @@ calcOperators.forEach((operator) => {
 ///Check if there is at least a previous value and an operator length is more than 
 equals.addEventListener("click", () => {
     //Add the new value to the array but don't overwrite the old one
-    if (sumArray.length < 2){
+    if (sumArray.length < 1){
         stop
     } else {
         currentValue = display.innerHTML
-        sumArray.push(currentValue);
+        sumArray.push(parseInt(currentValue));
     }
-    // Now change the numbers in the array to numbers
-    let firstNumber = parseFloat(sumArray[0]);
-    let secondNumber = parseFloat(sumArray [2]);
-    // And read the operator
-    let operatorInArray = sumArray[1];
 
-    switch (operatorInArray) {
+    // Now change the strings in the array to numbers
+    // And read the operator
+    let answer = 0;
+    switch (operatorValue) {
         case "+":
-        return display.innerHTML = firstNumber + secondNumber
+        answer = sumArray.reduce(plusSum);
+        sumArray = [];
+        previousValue = 0;
+        return display.innerHTML = answer;
         break;
         case "-":
-        return display.innerHTML = firstNumber - secondNumber
-        break;
-        case "/":
-        return display.innerHTML = firstNumber / secondNumber
+        answer = sumArray.reduce(minusSum);
+        sumArray = [];
+        previousValue = 0;
+        return display.innerHTML = answer;
         break;
         case "*":
-        return display.innerHTML = firstNumber * secondNumber
+        answer = sumArray.reduce(multiplySum);
+        sumArray = [];
+        previousValue = 0;
+        return display.innerHTML = answer;
+        break;
+        case "/":
+        answer = sumArray.reduce(divideSum);
+        sumArray = [];
+        previousValue = 0;
+        return display.innerHTML = answer;
         break;
         default:
         return display.innerHTML = "error"
     }
 });
+
+//   let operatorInArray = operatorArray[0];
+//     switch (operatorInArray) {
+//         case "+":
+//         let answer = sumArray.reduce(plusSum);
+//         return display.innerHTML = answer;
+//         break;
+//         case "-":
+//         let answer = sumArray.reduce(minusSum);
+//         return display.innerHTML = answer;
+//         break;
+//         case "*":
+//         let answer = sumArray.reduce(multiplySum);
+//         return display.innerHTML = answer;
+//         break;
+//         case "/":
+//         let answer = sumArray.reduce(divideSum);
+//         return display.innerHTML = answer;
+//         break;
+//         default:
+//         return display.innerHTML = "error"
+// //     }
+// });
+
+
+
+  
