@@ -1,10 +1,8 @@
 .calculator{
     display: inline-grid;
-    grid-template-columns: (repeat(4,1fr));
-    grid-template-rows: (repeat(7,1fr));
-    min-width: 300px;
-    max-width: 536px;
-    gap: 10px;
+    grid-template-columns: (repeat(4,100%));
+    grid-template-rows: (repeat(7,100%));
+    width: 100%;
 }
 
 #calculator__heading {
@@ -41,15 +39,15 @@
 .calculator__button{
     display: flex;
     align-items: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
     border-radius : 10px;
-    padding: 0px;
-    margin: 0px;
-    display: inline-block;
-    border: none;
     padding: 1rem 2rem;
+    border: none;
+    margin: 0px;
     margin: 0;
-    text-decoration: none;
     background: rgba($color: #ffffff2a, $alpha: 0.5);
     color: #222E50;
     font-family: sans-serif;
@@ -61,6 +59,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
 
 .calculator__button:hover, #equals:hover {
     background: #222E50;

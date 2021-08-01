@@ -1,51 +1,47 @@
-.container{
+.container {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(8,1fr);
-    gap:minmax(10px,16px);
 
+@media only screen and (max-width: 480px) {
+    margin: 0px 36px;
+    gap: 10px;
+    min-width: 320px;
+    max-width: 480px;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(10, 10vh);
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    margin: 0px 80px;
+    gap: 16px;
+    grid-template-columns: repeat(6, 20vw);
+    grid-template-rows: repeat(10, 10vh);
 }
 
-@media only screen and (min-width:0px) and (max-width: 480px){
- .container{
-    margin: 36px 0px;
-    .calculator {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
+@media only screen and (min-width:768px){
+    margin: 0px 36px;
+    gap: 10px;
+    min-width: 320px;
+    max-width: 480px;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(10, 10vh);
  }
-
-
-@media only screen and (min-width:480px) and (max-width: 768px){
-    .container {
-        margin: 36px 0px;
-       gap:16px;
-       .calculator {
-           grid-column-start: 2;
-           grid-column-end: 4;
-           grid-row-start: 1;
-           grid-row-end: 3;
-       }
-    }
-   }
-   
-   @media only screen and (min-width:768px) and (max-width: 2500px){
-    .container {
-       display: grid;
-       grid-template-columns: repeat(12,1fr);
-       grid-template-rows: repeat(4,1fr);
-       gap:16px;
-       margin: 182px 0px;
-       .calculator {
-           grid-column-start: 2;
-           grid-column-end: 4;
-           grid-row-start: 1;
-           grid-row-end: 3;
-       }
-    }
-   }
-   
-
 }
+.calculator{
+    @media only screen and (max-width: 480px) {
+    gap:10px;
+    width: 100%;
+    grid-area: 2/1/2/2;
+    }
+    @media only screen and (min-width: 480px) and (max-width: 768px){
+    gap: 16px;
+    width: 100%;
+    grid-area: 2/1/2/2;
+    }
+
+
+    @media only screen and (min-width:768px) and (max-width: 2500px){
+        gap: 16px;
+    width: 100%;
+    grid-area: 2/1/2/2;
+    }
+
+    }
