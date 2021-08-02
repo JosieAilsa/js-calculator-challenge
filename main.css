@@ -18,29 +18,22 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .container {
-    margin: 0px 36px;
     gap: 10px;
-    min-width: 320px;
-    max-width: 480px;
     grid-template-columns: repeat(4, 20vw);
     grid-template-rows: repeat(10, 10vh);
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .container {
-    margin: 0px 80px;
     gap: 16px;
-    grid-template-columns: repeat(6, 20vw);
+    grid-template-columns: repeat(6, 11vw);
     grid-template-rows: repeat(10, 10vh);
   }
 }
 @media only screen and (min-width: 768px) {
   .container {
-    margin: 0px 36px;
-    gap: 10px;
-    min-width: 320px;
-    max-width: 480px;
-    grid-template-columns: repeat(4, 20vw);
+    gap: 16px;
+    grid-template-columns: repeat(12, 8vw);
     grid-template-rows: repeat(10, 10vh);
   }
 }
@@ -56,14 +49,14 @@ body {
   .calculator {
     gap: 16px;
     width: 100%;
-    grid-area: 2/1/2/2;
+    grid-area: 1/2/2/4;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 2500px) {
+@media only screen and (min-width: 769px) and (max-width: 2500px) {
   .calculator {
     gap: 16px;
     width: 100%;
-    grid-area: 2/1/2/2;
+    grid-area: 1/2/2/4;
   }
 }
 
