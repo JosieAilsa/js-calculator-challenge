@@ -5,6 +5,7 @@
     gap: 10px;
     grid-template-columns: repeat(4, 20vw);
     grid-template-rows: repeat(10, 10vh);
+    justify-content: center;
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
     gap: 16px;

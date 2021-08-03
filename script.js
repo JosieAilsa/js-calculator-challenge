@@ -30,7 +30,6 @@ const minusSum = (acc, curr) => {
     } else {
     return acc -= curr;
     }
-    return acc - curr;
     };
 const multiplySum = (acc, curr) => {
     if ((Number.isInteger(acc) == false) || (Number.isInteger(curr) == false)){
@@ -39,7 +38,6 @@ const multiplySum = (acc, curr) => {
         } else {
         return acc * curr;
         }
-    return acc * curr;
     };
 const divideSum = (acc, curr) => {
     if ((Number.isInteger(acc) == false) || (Number.isInteger(curr) == false)){
@@ -48,7 +46,6 @@ const divideSum = (acc, curr) => {
         } else {
         return acc / curr;
         }
-    return acc / curr;
     };
 
 
