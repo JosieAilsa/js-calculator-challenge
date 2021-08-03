@@ -18,19 +18,36 @@ let operatorValue = "";
 const plusSum = (acc, curr) => {
     if ((Number.isInteger(acc) == false) || (Number.isInteger(curr) == false)){
     let number = parseFloat(acc.toFixed(3)) + parseFloat(curr.toFixed(3));
-    console.log(number)
     return number ;
     } else {
     return acc += curr;
     }
     };
 const minusSum = (acc, curr) => {
+    if ((Number.isInteger(acc) == false) || (Number.isInteger(curr) == false)){
+    let number = parseFloat(acc.toFixed(3)) - parseFloat(curr.toFixed(3));
+    return number ;
+    } else {
+    return acc -= curr;
+    }
     return acc - curr;
     };
 const multiplySum = (acc, curr) => {
+    if ((Number.isInteger(acc) == false) || (Number.isInteger(curr) == false)){
+        let number = parseFloat(acc.toFixed(3)) * parseFloat(curr.toFixed(3));
+        return number ;
+        } else {
+        return acc * curr;
+        }
     return acc * curr;
     };
 const divideSum = (acc, curr) => {
+    if ((Number.isInteger(acc) == false) || (Number.isInteger(curr) == false)){
+        let number = parseFloat(acc.toFixed(3)) / parseFloat(curr.toFixed(3));
+        return number ;
+        } else {
+        return acc / curr;
+        }
     return acc / curr;
     };
 
