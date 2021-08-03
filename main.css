@@ -77,6 +77,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  #calculator__heading {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 2500px) {
+  #calculator__heading {
+    font-size: 2rem;
+  }
+}
 
 #calculator__display {
   grid-column-start: 1;
@@ -89,6 +99,16 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  #calculator__display {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 2500px) {
+  #calculator__display {
+    font-size: 1.75rem;
+  }
 }
 
 #equals {
@@ -115,13 +135,23 @@ body {
   margin: 0;
   background: rgba(255, 255, 255, 0.5);
   color: #222E50;
-  font-family: sans-serif;
+  font-family: "Poppins" !important;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .calculator__button {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 2500px) {
+  .calculator__button {
+    font-size: 1.5rem;
+  }
 }
 
 .calculator__button:hover, #equals:hover {

@@ -16,7 +16,13 @@ let sumArray  = [];
 let operatorValue = "";
 
 const plusSum = (acc, curr) => {
+    if ((Number.isInteger(acc) == false) || (Number.isInteger(curr) == false)){
+    let number = parseFloat(acc.toFixed(3)) + parseFloat(curr.toFixed(3));
+    console.log(number)
+    return number ;
+    } else {
     return acc += curr;
+    }
     };
 const minusSum = (acc, curr) => {
     return acc - curr;
@@ -41,6 +47,8 @@ calcNumber.forEach((number) => {
 //Add a function to clear the display 
 let clearValues = () => {
     sumArray = [];
+    currentValue = "";
+    previousValue = "";
     display.innerHTML = "";
 }
 
@@ -51,11 +59,10 @@ calcOperators.forEach((operator) => {
 //When an operator is pressed change the current display value into the previous value var
     previousValue = display.innerHTML;
 //Push this value to element 0 in the sum array 
-    sumArray.push(parseInt(previousValue));
+    sumArray.push(parseFloat(previousValue));
 // Then get the value of the operator that was hit and store that in the array 
     operatorValue = event.target.value;
     console.dir(sumArray)
-
 //Clear the display to allow a new value to be added 
     currentValue = "";
     display.innerHTML = currentValue;
@@ -68,7 +75,7 @@ equals.addEventListener("click", () => {
         stop
     } else {
         currentValue = display.innerHTML
-        sumArray.push(parseInt(currentValue));
+        sumArray.push(parseFloat(currentValue));
     }
 
     // Now change the strings in the array to numbers
