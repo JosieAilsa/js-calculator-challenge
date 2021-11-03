@@ -1,0 +1,24 @@
+{
+  "name": "calculator-challenge",
+  "version": "1.0.0",
+  "description": "My first JS challenge making a simple calculator",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosieAilsa/js-calculator-chalenge.git"
+  },
+  "author": "Josie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosieAilsa/js-calculator-chalenge/issues"
+  },
+  "homepage": "https://github.com/JosieAilsa/js-calculator-chalenge#readme",
+  "devDependencies": {
+    "cypress": "^8.7.0"
+  }
+}
+
