@@ -124,7 +124,3 @@ equals.addEventListener("click", () => {
         return display.innerHTML = "error"
     }
 });
-
-
-
-  
