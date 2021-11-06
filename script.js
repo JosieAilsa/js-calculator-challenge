@@ -48,6 +48,31 @@ const divideSum = (acc, curr) => {
         }
     };
 
+const getAnswer = () => {
+    let answer = 0;
+    console.log("function fired")
+        switch (operatorValue) {
+            case "+":
+            answer = sumArray.reduce(plusSum);
+            console.log(answer)
+            return display.innerHTML = answer;
+            break;
+            case "-":
+            answer = sumArray.reduce(minusSum);
+            return display.innerHTML = answer;
+            break;
+            case "*":
+            answer = sumArray.reduce(multiplySum);
+            return display.innerHTML = answer;
+            break;
+            case "/":
+            answer = sumArray.reduce(divideSum);
+            return display.innerHTML = answer;
+            break;
+            default:
+            return display.innerHTML = "error"
+        }
+    }
 
 // When each number is pressed the add the number to the display 
 calcNumber.forEach((number) => {
@@ -70,13 +95,21 @@ let clearValues = () => {
 calcOperators.forEach((operator) => {
 //Add an event listener to it 
     operator.addEventListener("click", (event) => {
-//When an operator is pressed change the current display value into the previous value var
+//When an operator is pressed change the current display value into the previous value
     previousValue = display.innerHTML;
+// If sum array is >1 and opertor has already been pressed 
 //Push this value to element 0 in the sum array 
     sumArray.push(parseFloat(previousValue));
-// Then get the value of the operator that was hit and store that in the array 
+// Then get the value of the operator that was
+    console.log(sumArray);
+    if(operatorValue){
+        getAnswer()
+        sumArray = [];
+        previousValue = display.innerHTML;
+        sumArray.push(parseFloat(previousValue));
+    }
     operatorValue = event.target.value;
-    console.dir(sumArray)
+    console.log(sumArray);
 //Clear the display to allow a new value to be added 
     currentValue = "";
     display.innerHTML = currentValue;
@@ -84,43 +117,15 @@ calcOperators.forEach((operator) => {
 });
 ///Check if there is at least a previous value and an operator length is more than 
 equals.addEventListener("click", () => {
+    console.log(sumArray);
+    console.log(operatorValue)
     //Add the new value to the array but don't overwrite the old one
     if (sumArray.length < 1){
-        stop
-    } else {
-        currentValue = display.innerHTML
-        sumArray.push(parseFloat(currentValue));
-    }
-
-    // Now change the strings in the array to numbers
-    // And read the operator
-    let answer = 0;
-    switch (operatorValue) {
-        case "+":
-        answer = sumArray.reduce(plusSum);
-        sumArray = [];
-        previousValue = 0;
-        return display.innerHTML = answer;
-        break;
-        case "-":
-        answer = sumArray.reduce(minusSum);
-        sumArray = [];
-        previousValue = 0;
-        return display.innerHTML = answer;
-        break;
-        case "*":
-        answer = sumArray.reduce(multiplySum);
-        sumArray = [];
-        previousValue = 0;
-        return display.innerHTML = answer;
-        break;
-        case "/":
-        answer = sumArray.reduce(divideSum);
-        sumArray = [];
-        previousValue = 0;
-        return display.innerHTML = answer;
-        break;
-        default:
-        return display.innerHTML = "error"
-    }
+        stop 
+    } 
+    currentValue = display.innerHTML;
+    sumArray.push(parseFloat(currentValue));
+    getAnswer();
+    sumArray = [];
+    previousValue = 0;
 });
