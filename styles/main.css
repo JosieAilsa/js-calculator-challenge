@@ -34,6 +34,16 @@ body {
     gap: 10px;
   }
 }
+.container .calculator #calculator__display {
+  grid-area: 1/1/1/5;
+}
+.container .calculator #equals {
+  grid-area: 6/1/7/5;
+}
+
+#container__heading {
+  text-align: center;
+}
 
 .calculator #calculator__heading {
   font-size: 1.5rem;
@@ -52,10 +62,9 @@ body {
   }
 }
 .calculator #calculator__display {
-  grid-area: 1/1/1/5;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  height: 8vmin;
+  height: 10vh;
   margin: 0px;
   display: flex;
   justify-content: flex-end;
@@ -72,7 +81,6 @@ body {
   }
 }
 .calculator #equals {
-  grid-area: 6/1/7/5;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   margin: 0px;

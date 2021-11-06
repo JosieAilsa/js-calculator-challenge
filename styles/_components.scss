@@ -1,77 +1,78 @@
+#container__heading {
+    text-align: center;
+}
 .calculator{  
 
-#calculator__heading {
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media only screen and (min-width: 480px) and (max-width: 768px){
-        font-size: 1.75rem;
-        }
-    @media only screen and (min-width:769px) and (max-width: 2500px){
-        font-size: 2rem;
-    }
-}
-#calculator__display {
-    grid-area: 1/1/1/5;
-    background: rgba($color: #ffffff2a, $alpha: 0.5);
-    border-radius : 10px;
-    height: 8vmin;
-    margin: 0px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    @media only screen and (min-width: 480px) and (max-width: 768px){
+    #calculator__heading {
         font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (min-width: 480px) and (max-width: 768px){
+            font-size: 1.75rem;
+            }
+        @media only screen and (min-width:769px) and (max-width: 2500px){
+            font-size: 2rem;
         }
-    @media only screen and (min-width:769px) and (max-width: 2500px){
-        font-size: 1.75rem;
+        }
+    #calculator__display {
+        background: rgba($color: #ffffff2a, $alpha: 0.5);
+        border-radius : 10px;
+        height: 10vh;
+        margin: 0px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @media only screen and (min-width: 480px) and (max-width: 768px){
+            font-size: 1.5rem;
+            }
+        @media only screen and (min-width:769px) and (max-width: 2500px){
+            font-size: 1.75rem;
+        }
+            }
+    #equals {
+        background: rgba($color: #ffffff2a, $alpha: 0.5);
+        border-radius : 10px;
+        margin: 0px;
+        }
+    .calculator__button{
+        display: flex;
+        align-items: center;
+        align-content: stretch;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        border-radius : 10px;
+        padding: 1vmin 2vmin;
+        border: none;
+        margin: 0px;
+        margin: 0;
+        background: rgba($color: #ffffff2a, $alpha: 0.5);
+        color: #222E50;
+        font-family: 'Poppins' !important;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    
+        @media only screen and (min-width: 480px) and (max-width: 768px){
+            font-size: 1.25rem;
+            }
+        @media only screen and (min-width:769px) and (max-width: 2500px){
+            font-size: 1.5rem;
+            }
+        }
+
+    .calculator__button:hover, #equals:hover {
+        background: #222E50;
+        color: $secondary-colour;
     }
-}
-#equals {
-    grid-area: 6/1/7/5;
-    background: rgba($color: #ffffff2a, $alpha: 0.5);
-    border-radius : 10px;
-    margin: 0px;
-}
-.calculator__button{
-    display: flex;
-    align-items: center;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    border-radius : 10px;
-    padding: 1vmin 2vmin;
-    border: none;
-    margin: 0px;
-    margin: 0;
-    background: rgba($color: #ffffff2a, $alpha: 0.5);
-    color: #222E50;
-    font-family: 'Poppins' !important;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  
-    @media only screen and (min-width: 480px) and (max-width: 768px){
-        font-size: 1.25rem;
-        }
-    @media only screen and (min-width:769px) and (max-width: 2500px){
-        font-size: 1.5rem;
-        }
-}
 
+    .calculator__button:active #equals:active {
+        transform: scale(0.99);
+    }
+    }
 
-.calculator__button:hover, #equals:hover {
-    background: #222E50;
-    color: $secondary-colour;
-}
-
-.calculator__button:active #equals:active {
-    transform: scale(0.99);
-}
-}

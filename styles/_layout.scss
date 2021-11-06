@@ -30,6 +30,12 @@
         @media only screen and (max-width: 480px) {
         gap: 10px;
         }
-        
+    
+    #calculator__display {
+        grid-area: 1/1/1/5;
+    }
+    #equals {
+        grid-area: 6/1/7/5;
+    }
     }
 }
