@@ -101,7 +101,6 @@ describe("Multiplication ", () => {
         cy.visit("http://127.0.0.1:5500/index.html");
         //Set up initial state 
         // cy.visit("https://josieailsa.github.io/js-calculator-chalenge/")
-        //query an elemenet 
         cy.contains("2").click()
         cy.contains("*").click()
         cy.contains("2").click()
@@ -111,7 +110,6 @@ describe("Multiplication ", () => {
     it("Should give 4 * 10 = 40", () => {
         //Set up initial state 
         // cy.visit("https://josieailsa.github.io/js-calculator-chalenge/")
-        //query an elemenet 
         cy.contains("4").click()
         cy.contains("*").click()
         cy.contains("1").click()
@@ -177,7 +175,6 @@ describe("Mixed sums ", () => {
         cy.visit("http://127.0.0.1:5500/index.html");
         //Set up initial state 
         // cy.visit("https://josieailsa.github.io/js-calculator-chalenge/")
-        //query an elemenet 
         cy.contains("2").click()
         cy.contains("+").click()
         cy.contains("8").click()
@@ -191,7 +188,6 @@ describe("Mixed sums ", () => {
         cy.visit("http://127.0.0.1:5500/index.html");
         //Set up initial state 
         // cy.visit("https://josieailsa.github.io/js-calculator-chalenge/")
-        //query an elemenet 
         cy.contains("2").click()
         cy.contains("*").click()
         cy.contains("8").click()
@@ -205,7 +201,6 @@ describe("Mixed sums ", () => {
         cy.visit("http://127.0.0.1:5500/index.html");
         //Set up initial state 
         // cy.visit("https://josieailsa.github.io/js-calculator-chalenge/")
-        //query an elemenet 
         cy.contains("1").click()
         cy.contains("0").click()
         cy.contains("*").click()
