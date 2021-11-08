@@ -201,7 +201,7 @@ describe("Mixed sums ", () => {
     it("Should give 10 * 4 / 5 = 8", () => {
         // cy.visit("http://127.0.0.1:5500/index.html");
         //Set up initial state 
-        // cy.visit("https://josieailsa.github.io/js-calculator-chalenge/")
+        cy.visit("https://josieailsa.github.io/js-calculator-chalenge/")
         cy.contains("1").click()
         cy.contains("0").click()
         cy.contains("*").click()
